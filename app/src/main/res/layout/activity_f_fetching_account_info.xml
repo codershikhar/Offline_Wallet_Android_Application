@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorDarkBackground"
+    android:gravity="center"
+    tools:context="com.example.shikhar420.mobilepay.fFetchingAccountInfoActivity"
+    android:weightSum="1">
+
+
+    <TextView
+        android:id="@+id/textView_fetchingInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fetching Account Info"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"/>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="249dp"
+        android:layout_height="191dp"
+        android:src="@drawable/loading1"
+        android:layout_weight="0.14" />
+
+</LinearLayout>

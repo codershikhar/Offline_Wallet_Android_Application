@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryLight"
+    android:gravity="center"
+    tools:context="com.example.shikhar420.mobilepay.WalletActivity"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="match_parent"
+        android:layout_height="99dp"
+        app:srcCompat="@drawable/banktowallet"
+        android:layout_weight="0.26" />
+
+    <TextView
+        android:id="@+id/textView_wallet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Wallet"
+        android:textSize="45sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginLeft="10dp"
+        android:background="@color/colorPrimaryTextDark"/>
+
+    <TextView
+        android:id="@+id/textView_currentballance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/walletbalance"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:paddingRight="20dp"
+        android:drawableRight="@drawable/ic_account_balance_wallet_darkgray_24dp"/>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imageButton_addmoney"
+            android:layout_width="@dimen/button_img_width_qr"
+            android:layout_height="@dimen/button_img_width_qr"
+            android:layout_column="0"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_row="0"
+            android:adjustViewBounds="true"
+            android:background="@drawable/imagebuttonborder1"
+            android:padding="20dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/requestmoney1600" />
+
+        <ImageButton
+            android:id="@+id/imageButton_upload"
+            android:layout_width="@dimen/button_img_width_qr"
+            android:layout_height="@dimen/button_img_width_qr"
+            android:layout_column="1"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_row="0"
+            android:adjustViewBounds="true"
+            android:background="@drawable/imagebuttonborder1"
+            android:padding="20dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/moneytransfer1600" />
+
+        <TextView
+            android:id="@+id/textView_addmoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_gravity="center"
+            android:layout_row="1"
+            android:textSize="25dp"
+            android:text="Add Money" />
+
+        <TextView
+            android:id="@+id/textView_upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:layout_row="1"
+            android:textSize="25dp"
+            android:text="Upload" />
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/textView_sendrecieveqrdesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Description : Terms and Conditions"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+</LinearLayout>

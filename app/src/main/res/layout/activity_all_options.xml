@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryLight"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context="com.example.shikhar420.mobilepay.AllOptionsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/mobilepaylogoonly"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/textView_logo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="MobilePay"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:background="@android:color/darker_gray"/>
+
+    <TextView
+        android:id="@+id/textView_transfermoney"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Transfer Money"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imageButton_send"
+            android:layout_width="@dimen/button_img_width"
+            android:layout_height="@dimen/button_img_width"
+            android:layout_column="0"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_row="0"
+            android:adjustViewBounds="true"
+            android:background="@color/colorPrimaryDark"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/payment_icon"
+            android:onClick="sendOnClicked"/>
+
+        <ImageButton
+            android:id="@+id/imageButton_sendrecieveqr"
+            android:layout_width="@dimen/button_img_width"
+            android:layout_height="@dimen/button_img_width"
+            android:layout_column="1"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_row="0"
+            android:adjustViewBounds="true"
+            android:background="@color/colorPrimaryDark"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/sendrecieveqr"
+            android:onClick="scanQROnClick"/>
+
+        <ImageButton
+            android:id="@+id/imageButton_sendrecievewifi"
+            android:layout_width="@dimen/button_img_width"
+            android:layout_height="@dimen/button_img_width"
+            android:layout_column="2"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_row="0"
+            android:adjustViewBounds="true"
+            android:background="@color/colorPrimaryDark"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/wifitransfer"
+            android:onClick="onClickBluetoothTransfer"/>
+
+        <TextView
+            android:id="@+id/textView_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_gravity="center"
+            android:layout_row="1"
+            android:text="Send" />
+
+        <TextView
+            android:id="@+id/textView_sendrecieveqr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:layout_row="1"
+            android:text="Scan QR" />
+
+        <TextView
+            android:id="@+id/textView_sendrecievewifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_gravity="center"
+            android:layout_row="1"
+            android:text="Wifi Transfer" />
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/textView_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Information"
+        android:textAllCaps="true"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_wallet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="  Wallet"
+                android:textSize="26sp"
+                android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                android:drawableLeft="@drawable/ic_account_balance_wallet_black_24dp"
+                android:onClick="walletOnClick"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="5dp"
+                android:background="@android:color/darker_gray"/>
+
+            <TextView
+                android:id="@+id/textView_transactions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="  Transacations"
+                android:textSize="26sp"
+                android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                android:drawableLeft="@drawable/ic_import_export_black_24dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="5dp"
+                android:background="@android:color/darker_gray"/>
+
+            <TextView
+                android:id="@+id/textView_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="  Profile"
+                android:textSize="26sp"
+                android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                android:drawableLeft="@drawable/ic_person_black_24dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="5dp"
+                android:background="@android:color/darker_gray"/>
+
+            <TextView
+                android:id="@+id/textView_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="  Account"
+                android:textSize="26sp"
+                android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                android:drawableLeft="@drawable/ic_account_balance_black_24dp"
+                android:onClick="onClickAccount"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="5dp"
+                android:background="@android:color/darker_gray"/>
+
+            <TextView
+                android:id="@+id/textView_addaccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="  Add Account"
+                android:textSize="26sp"
+                android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                android:drawableLeft="@drawable/ic_playlist_add_black_24dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="5dp"
+                android:background="@android:color/darker_gray"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

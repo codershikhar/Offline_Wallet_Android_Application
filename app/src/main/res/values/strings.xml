@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">mobilepay</string>
+    <string name="walletbalance">Balance : 100 \u20B9</string>
+    <string name="mobile_verify_tnc">By clicking Next I agree to the <u>Terms and conditions</u>.</string>
+
+    <string name="account_info_demo">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    </string>
+</resources>
