@@ -202,7 +202,8 @@
                 android:text="  Profile"
                 android:textSize="26sp"
                 android:drawableRight="@drawable/ic_chevron_right_black_24dp"
-                android:drawableLeft="@drawable/ic_person_black_24dp"/>
+                android:drawableLeft="@drawable/ic_person_black_24dp"
+                android:onClick="profileOnClick"/>
 
             <View
                 android:layout_width="match_parent"

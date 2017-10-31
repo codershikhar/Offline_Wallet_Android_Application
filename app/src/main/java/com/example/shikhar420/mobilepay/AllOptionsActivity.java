@@ -67,4 +67,10 @@ public class AllOptionsActivity extends AppCompatActivity {
         }
         return false;
     }
+
+    public void profileOnClick(View view)
+    {
+        Intent intent = new Intent(getApplicationContext(), ProfileActivity.class);
+        startActivity(intent);
+    }
 }

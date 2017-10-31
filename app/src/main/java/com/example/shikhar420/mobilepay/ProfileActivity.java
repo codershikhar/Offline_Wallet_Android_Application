@@ -30,7 +30,6 @@ public class ProfileActivity extends AppCompatActivity {
         String str = "no";
         fOut.write(str.getBytes());
         fOut.close();
-
         Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
         startActivity(intent);
     }
