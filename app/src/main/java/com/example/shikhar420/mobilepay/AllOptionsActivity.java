@@ -1,6 +1,9 @@
 package com.example.shikhar420.mobilepay;
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -31,6 +34,10 @@ public class AllOptionsActivity extends AppCompatActivity {
         if(!internet)
         {
             Toast.makeText(getApplicationContext(), "No Internet Connection!", Toast.LENGTH_LONG).show();
+        }else
+        {
+            Intent intent = new Intent(getApplicationContext(), SendMoneyToAccountActivity.class);
+            startActivity(intent);
         }
     }
 
@@ -59,13 +66,20 @@ public class AllOptionsActivity extends AppCompatActivity {
     }
 
     public boolean isInternetAvailable() {
-        try {
-            final InetAddress address = InetAddress.getByName("www.google.com");
-            return true;
-        } catch (Exception e) {
-            // Log error
+        boolean haveConnectedWifi = false;
+        boolean haveConnectedMobile = false;
+
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo[] netInfo = cm.getAllNetworkInfo();
+        for (NetworkInfo ni : netInfo) {
+            if (ni.getTypeName().equalsIgnoreCase("WIFI"))
+                if (ni.isConnected())
+                    haveConnectedWifi = true;
+            if (ni.getTypeName().equalsIgnoreCase("MOBILE"))
+                if (ni.isConnected())
+                    haveConnectedMobile = true;
         }
-        return false;
+        return haveConnectedWifi || haveConnectedMobile;
     }
 
     public void profileOnClick(View view)
