@@ -89,6 +89,7 @@
             android:layout_row="0"
             android:adjustViewBounds="true"
             android:background="@drawable/imagebuttonborder"
+            android:onClick="generateQRonclick"
             android:padding="20dp"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/recievemoney1" />
