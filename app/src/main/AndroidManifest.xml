@@ -44,7 +44,8 @@
         <activity android:name=".MainBluetoothActivity" />
         <activity android:name=".AccountActivity" />
         <activity android:name=".ProfileActivity" />
-        <activity android:name=".SendMoneyToAccountActivity"></activity>
+        <activity android:name=".SendMoneyToAccountActivity" />
+        <activity android:name=".Recivers_qr"></activity>
     </application>
 
 </manifest>

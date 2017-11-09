@@ -6,4 +6,20 @@
     android:layout_height="match_parent"
     tools:context="com.example.shikhar420.mobilepay.QRScannerActivity">
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:editable="false"
+        android:text="Reciever"
+        tools:layout_editor_absoluteX="112dp"
+        tools:layout_editor_absoluteY="56dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="185dp"
+        tools:layout_editor_absoluteY="56dp" />
 </android.support.constraint.ConstraintLayout>
