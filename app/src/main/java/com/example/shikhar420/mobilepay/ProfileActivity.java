@@ -26,7 +26,7 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     public void onClickLogout(View view) throws IOException {
-        FileOutputStream fOut = openFileOutput("login.txt",MODE_WORLD_READABLE);
+        FileOutputStream fOut = openFileOutput("login.txt",MODE_PRIVATE);
         String str = "no";
         fOut.write(str.getBytes());
         fOut.close();
