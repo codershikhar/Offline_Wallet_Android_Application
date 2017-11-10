@@ -17,7 +17,7 @@ public class fFetchingAccountInfoActivity extends AppCompatActivity {
 
         FileOutputStream fOut = null;
         try {
-            fOut = openFileOutput("login.txt",MODE_WORLD_READABLE);
+            fOut = openFileOutput("login.txt",MODE_PRIVATE);
             String str = "yes";
             fOut.write(str.getBytes());
             fOut.close();

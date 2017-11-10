@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.shikhar420.mobilepay.QRScannerActivity">
 
     <TextView
@@ -12,6 +13,7 @@
         android:layout_height="wrap_content"
         android:editable="false"
         android:text="Reciever"
+        android:visibility="invisible"
         tools:layout_editor_absoluteX="112dp"
         tools:layout_editor_absoluteY="56dp" />
 
@@ -22,4 +24,23 @@
         android:text="TextView"
         tools:layout_editor_absoluteX="185dp"
         tools:layout_editor_absoluteY="56dp" />
-</android.support.constraint.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/edittext_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/button_generate_qr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="generate_qr"
+        android:text="Button"
+        tools:layout_editor_absoluteX="134dp"
+        tools:layout_editor_absoluteY="196dp" />
+
+</android.widget.LinearLayout>

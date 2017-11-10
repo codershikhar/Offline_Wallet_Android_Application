@@ -38,14 +38,15 @@
         <activity android:name=".BankSelectActivity" />
         <activity android:name=".AllOptionsActivity" />
         <activity android:name=".QRChoiceActivity" />
-        <activity android:name=".QRScannerActivity" />
+        <activity android:name=".QRScannerSenderActivity" />
         <activity android:name=".WalletActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".MainBluetoothActivity" />
         <activity android:name=".AccountActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".SendMoneyToAccountActivity" />
-        <activity android:name=".Recivers_qr"></activity>
+        <activity android:name=".Recivers_qr" />
+        <activity android:name=".QR_money_transfer_by_sender"></activity>
     </application>
 
 </manifest>
