@@ -15,6 +15,6 @@ public class LoginActivity extends AppCompatActivity {
 
     public void onClickForgotPassword(View view)
     {
-        Toast.makeText(getApplicationContext(), "Chutiya!!!", Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), "THIS", Toast.LENGTH_LONG).show();
     }
 }
