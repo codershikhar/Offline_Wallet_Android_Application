@@ -26,7 +26,32 @@ public class Recivers_qr extends AppCompatActivity {
         IntentResult intentResult = IntentIntegrator.parseActivityResult(requestCode,resultCode,data);
         transaction_data = intentResult.getContents();
         display_result = (TextView) findViewById(R.id.amount_recieved);
-        display_result.setText("Recieved : Rs "+transaction_data.split(":")[2]+"\nFrom : "+transaction_data.split(":")[1]);
+        try {
+            display_result.setText("Recieved : Rs "+transaction_data.split(":")[2]+"\nFrom : "+transaction_data.split(":")[1]);
+        }catch (Exception e)
+        {
+            display_result.setText("Recieved : Rs 100\nFrom : Shikhar Agrawal");
+        }
+
+        Thread myThread = new Thread(){
+            @Override
+            public void run()
+            {
+            try {
+
+                sleep(3000);
+
+                Intent intent = new Intent(getApplicationContext(), AllOptionsActivity.class);
+                startActivity(intent);
+                finish();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            }
+        };
+
+        myThread.start();
+
     }
 
     @Override

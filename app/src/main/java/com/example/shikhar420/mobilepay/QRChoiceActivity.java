@@ -42,7 +42,6 @@ public class QRChoiceActivity extends AppCompatActivity {
         super.onBackPressed();
         Intent intent = new Intent(this,Recivers_qr.class);
         startActivity(intent);
-
     }
 
 

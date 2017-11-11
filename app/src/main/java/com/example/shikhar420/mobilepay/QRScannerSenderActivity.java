@@ -78,7 +78,7 @@ public class QRScannerSenderActivity extends AppCompatActivity implements ZXingS
         amount = editText.getText().toString();
         IntentIntegrator integrator=new IntentIntegrator(this);
         integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE_TYPES);
-        integrator.shareText(recieverID + ":1234567891:"+amount);
+        integrator.shareText("Shikhar Agrawal" + ":1234567891:Rs."+amount);
 
         //new IntentIntegrator(this).setPrompt("Press Back Once Done").shareText(recieverID + ":1234567891:"+amount);
     }
@@ -96,9 +96,9 @@ public class QRScannerSenderActivity extends AppCompatActivity implements ZXingS
     @Override
     protected void onStart() {
         super.onStart();
-        TextView reciever_disp_textview =(TextView) findViewById(R.id.textView3);
-        String reciev = ""+recieverID;
-        reciever_disp_textview.setText(reciev);
+//        TextView reciever_disp_textview =(TextView) findViewById(R.id.textView3);
+//        String reciev = ""+recieverID;
+//        reciever_disp_textview.setText(reciev);
     }
 
     public void onRequestPermissionResult(int requestCode, String permission[], int grantResults[])

@@ -5,42 +5,63 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.shikhar420.mobilepay.QRScannerActivity">
+    android:background="@color/colorPrimaryLight"
+    tools:context="com.example.shikhar420.mobilepay.QRScannerSenderActivity">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:editable="false"
-        android:text="Reciever"
-        android:visibility="invisible"
-        tools:layout_editor_absoluteX="112dp"
-        tools:layout_editor_absoluteY="56dp" />
+    <!--<TextView-->
+        <!--android:id="@+id/textView2"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:editable="false"-->
+        <!--android:text="Reciever"-->
+        <!--android:visibility="invisible"-->
+        <!--tools:layout_editor_absoluteX="112dp"-->
+        <!--tools:layout_editor_absoluteY="56dp" />-->
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="185dp"
-        tools:layout_editor_absoluteY="56dp" />
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/ic_keyboard_arrow_left_black_24dp"
+        android:text="   Transfer Money"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="167dp"
+        android:layout_height="154dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/steppay" />
 
     <EditText
         android:id="@+id/edittext_amount"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/ic_attach_money_black_24dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:visibility="invisible" />
+        android:hint="Enter Amount"
+        android:inputType="number" />
 
     <Button
         android:id="@+id/button_generate_qr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="generate_qr"
-        android:text="Button"
-        tools:layout_editor_absoluteX="134dp"
-        tools:layout_editor_absoluteY="196dp" />
+        android:layout_gravity="center"
+        android:background="@color/colorPrimaryDark"
+        android:text="Proceed"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="24dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:onClick="generate_qr"/>
 
 </android.widget.LinearLayout>
