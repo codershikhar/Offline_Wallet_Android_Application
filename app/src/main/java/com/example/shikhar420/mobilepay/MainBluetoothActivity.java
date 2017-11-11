@@ -13,9 +13,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.nio.charset.Charset;
 import java.util.ArrayList;
@@ -180,7 +185,8 @@ public class MainBluetoothActivity extends AppCompatActivity implements AdapterV
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_bluetooth);
-        Button btnONOFF = (Button) findViewById(R.id.btnONOFF);
+//        Button btnONOFF = (Button) findViewById(R.id.btnONOFF);
+        ImageView imageView3Bluetooth = (ImageView) findViewById(R.id.imageView3Bluetooth);
         btnEnableDisable_Discoverable = (Button) findViewById(R.id.btnDiscoverable_on_off);
         lvNewDevices = (ListView) findViewById(R.id.lvNewDevices);
         mBTDevices = new ArrayList<>();
@@ -193,8 +199,8 @@ public class MainBluetoothActivity extends AppCompatActivity implements AdapterV
 
         lvNewDevices.setOnItemClickListener(MainBluetoothActivity.this);
 
-
-        btnONOFF.setOnClickListener(new View.OnClickListener() {
+        //btnONOFF.setOnClickListener
+        imageView3Bluetooth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.d(TAG, "onClick: enabling/disabling bluetooth.");
@@ -279,6 +285,13 @@ public class MainBluetoothActivity extends AppCompatActivity implements AdapterV
             IntentFilter discoverDevicesIntent = new IntentFilter(BluetoothDevice.ACTION_FOUND);
             registerReceiver(mBroadcastReceiver3, discoverDevicesIntent);
         }
+        setContentView(R.layout.activity_main_bluetooth);
+        TextView tv1 = (TextView) findViewById(R.id.textView_BTDevice1);
+        TextView tv2 = (TextView) findViewById(R.id.textView_BTDevice2);
+        TextView tv3 = (TextView) findViewById(R.id.textView_BTDevice3);
+        tv1.setText("Samsung J7");
+        tv2.setText("Rishabh's Phone");
+        tv3.setText("Shikhar's Phone");
     }
 
     /**
@@ -322,5 +335,38 @@ public class MainBluetoothActivity extends AppCompatActivity implements AdapterV
             mBTDevice = mBTDevices.get(i);
             mBluetoothConnection = new BluetoothConnectionService(MainBluetoothActivity.this);
         }
+    }
+
+    public void sendViaBluetoothTo(View view)
+    {
+        setContentView(R.layout.activity_send_money_via_bluetooth);
+    }
+
+    public void proceedOnClick(View view)
+    {
+        setContentView(R.layout.money_transfer_success);
+        TextView et2 = (TextView) findViewById(R.id.textView_monetTO_mobile);
+        TextView et3 = (TextView) findViewById(R.id.textView_moneyAmount);
+        et2.setText("");
+        et3.setText("Ammount : " + 100 + " Rs.");
+
+        Thread myThread = new Thread(){
+            @Override
+            public void run()
+            {
+                try {
+
+                    sleep(3000);
+
+                    Intent intent = new Intent(getApplicationContext(), AllOptionsActivity.class);
+                    startActivity(intent);
+                    finish();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+
+        myThread.start();
     }
 }

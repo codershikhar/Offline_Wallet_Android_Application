@@ -5,31 +5,44 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/colorPrimaryLight"
     tools:context="com.example.shikhar420.mobilepay.MainBluetoothActivity">
 
+    <ImageView
+        android:id="@+id/imageView3Bluetooth"
+        android:layout_width="184dp"
+        android:layout_height="117dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/bluetoothicon" />
 
-    <Button
-        android:id="@+id/btnONOFF"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ON/OFF"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+    <!--<Button-->
+        <!--android:id="@+id/btnONOFF"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="ON/OFF"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:layout_marginRight="8dp"-->
+        <!--android:layout_marginLeft="8dp"-->
+        <!--android:layout_marginStart="8dp"-->
+        <!--android:layout_marginEnd="8dp" />-->
 
     <Button
         android:id="@+id/btnDiscoverable_on_off"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Enable Discoverable"
+        android:text="     Enable Discoverable     "
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginRight="8dp"
         android:onClick="btnEnableDisable_Discoverable"
         android:layout_marginLeft="8dp"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="18dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp" />
 
@@ -37,45 +50,50 @@
         android:id="@+id/btnFindUnpairedDevices"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Discover"
+        android:text="     Discover Devices     "
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="18dp"
         android:onClick="btnDiscover"
         tools:layout_editor_absoluteY="96dp" />
 
-    <Button
-        android:id="@+id/btnStartConnection"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:text="Start Connection" />
+    <!--<Button-->
+        <!--android:id="@+id/btnStartConnection"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginEnd="8dp"-->
+        <!--android:layout_marginLeft="8dp"-->
+        <!--android:layout_marginRight="8dp"-->
+        <!--android:layout_marginStart="8dp"-->
+        <!--android:text="Start Connection" />-->
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal">-->
 
-        <EditText
-            android:id="@+id/editText"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:layout_marginLeft="10dp"
-            android:inputType="textPersonName"
-            android:text="Name" />
+        <!--<EditText-->
+            <!--android:id="@+id/editText"-->
+            <!--android:layout_width="250dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:ems="10"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:inputType="textPersonName"-->
+            <!--android:text="Name" />-->
 
-        <Button
-            android:id="@+id/btnSend"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Send" />
+        <!--<Button-->
+            <!--android:id="@+id/btnSend"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Send" />-->
 
-    </LinearLayout>
+    <!--</LinearLayout>-->
 
 
     <TextView
@@ -83,8 +101,58 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:text="TextView"
-        android:textSize="20dp" />
+        android:layout_marginTop="20dp"
+        android:text="Discovered Devices"
+        android:textSize="20dp"
+        android:onClick="sendViaBluetoothTo"/>
+
+    <TextView
+        android:id="@+id/textView_BTDevice1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:text=""
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="5dp"
+        android:background="@android:color/darker_gray"/>
+
+    <TextView
+        android:id="@+id/textView_BTDevice2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:text=""
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="5dp"
+        android:background="@android:color/darker_gray"/>
+
+    <TextView
+        android:id="@+id/textView_BTDevice3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:text=""
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="5dp"
+        android:background="@android:color/darker_gray"/>
 
     <ListView
         android:id="@+id/lvNewDevices"
@@ -93,7 +161,6 @@
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp" />
+        android:layout_marginStart="8dp" />
 
 </LinearLayout>

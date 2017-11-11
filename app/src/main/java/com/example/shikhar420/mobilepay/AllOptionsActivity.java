@@ -15,10 +15,17 @@ import java.net.UnknownHostException;
 
 public class AllOptionsActivity extends AppCompatActivity {
     static boolean internet = false;
+    static String BTString = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_options);
+
+        if(BTString.equals("Done"))
+        {
+            Toast.makeText(getApplicationContext(), "BT Transfer Complete", Toast.LENGTH_LONG);
+            BTString = "";
+        }
 
         internet = isInternetAvailable();
 
