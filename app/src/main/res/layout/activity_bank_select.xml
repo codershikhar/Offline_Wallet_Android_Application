@@ -25,19 +25,145 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:text="ALL BANKS"
         android:textSize="15sp"
         android:textStyle="bold"/>
 
-    <ListView
-        android:id="@+id/listview_banklist"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/bankofbaroda"/>
+
+        <TextView
+            android:id="@+id/textViewBank1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  Bank Of Baroda"
+            android:layout_gravity="center_horizontal"
+            android:textSize="26sp"
+            android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+            android:onClick="bankselectOnClick"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="5dp"
+        android:background="@android:color/darker_gray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/icici"/>
+
+        <TextView
+            android:id="@+id/textViewBank2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  ICICI"
+            android:layout_gravity="center_horizontal"
+            android:textSize="26sp"
+            android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+            android:onClick="bankselectOnClick"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="5dp"
+        android:background="@android:color/darker_gray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/sbi"/>
+
+        <TextView
+            android:id="@+id/textViewBank3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  State Bank Of India"
+            android:layout_gravity="center_horizontal"
+            android:textSize="26sp"
+            android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+            android:onClick="bankselectOnClick"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="5dp"
+        android:background="@android:color/darker_gray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/axisbank"/>
+
+        <TextView
+            android:id="@+id/textViewBank4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  Axis Bank"
+            android:layout_gravity="center_horizontal"
+            android:textSize="26sp"
+            android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+            android:onClick="bankselectOnClick"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="5dp"
+        android:background="@android:color/darker_gray"/>
+
+    <TextView
+        android:id="@+id/textView_allbank123"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
-        android:dividerHeight="5dp"
-        android:footerDividersEnabled="false"
-        android:headerDividersEnabled="true" />
+        android:text="We Will Be Adding More Banks Soon..."
+        android:textSize="10sp"/>
+
+    <!--<ListView-->
+        <!--android:id="@+id/listview_banklist"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:dividerHeight="5dp"-->
+        <!--android:footerDividersEnabled="false"-->
+        <!--android:headerDividersEnabled="true" />-->
 
 </LinearLayout>
